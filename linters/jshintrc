@@ -1,62 +1,95 @@
 {
-  /*
-   * ENVIRONMENTS
-   * =================
-   */
+    // ERROR REPORTING
 
-  // Define globals exposed by modern browsers.
-  "browser": true,
+    "passfail": false,        // Whether the scan should stop on first error.
+    "maxerr": 100,            // Maximum errors before stopping.
 
-  // Define globals exposed by jQuery.
-  "jquery": true,
 
-  // Define globals exposed by Node.js.
-  "node": true,
+    // PREDEFINED GLOBALS
+    // (Depends on project)
 
-  // Allow ES6.
-  "esnext": true,
+    "browser": true,          // Whether the standard browser globals should be predefined.
+    "node": true,             // Whether the Node.js environment globals should be predefined.
+    "rhino": false,           // Whether the Rhino environment globals should be predefined.
+    "couch": false,           // Whether CouchDB globals should be predefined.
+    "wsh": false,             // Whether the Windows Scripting Host environment globals should be predefined.
 
-  /*
-   * ENFORCING OPTIONS
-   * =================
-   */
+    "jquery": false,          // Whether jQuery globals should be predefined.
+    "prototypejs": false,     // Whether Prototype and Scriptaculous globals should be predefined.
+    "mootools": false,        // Whether MooTools globals should be predefined.
+    "dojo": false,            // Whether Dojo Toolkit globals should be predefined.
 
-  // Force all variable names to use either camelCase style or UPPER_CASE
-  // with underscores.
-  "camelcase": true,
+    "predef": [               // Custom predefined globals.
+        "afterEach", "beforeEach", "before", "describe", "expect", "it"  // Mocha
+    ],
 
-  // Prohibit use of == and != in favor of === and !==.
-  "eqeqeq": true,
 
-  // Enforce tab width of 2 spaces.
-  "indent": 2,
+    // DEVELOPMENT
 
-  // Prohibit use of a variable before it is defined.
-  "latedef": true,
+    "debug": false,           // Whether debugger statements should be allowed.
+    "devel": false,           // Whether logging globals should be predefined (console, alert, etc.).
 
-  // Enforce line length to 80 characters
-  "maxlen": 80,
 
-  // Require capitalized names for constructor functions.
-  "newcap": true,
+    // ECMASCRIPT 5
 
-  // Enforce use of single quotation marks for strings.
-  "quotmark": "single",
+    "strict": true,          // Whether the "use strict"; pragma should be required.
+    "globalstrict": true,    // Whether global "use strict"; should be allowed (also enables strict).
 
-  // Enforce placing 'use strict' at the top function scope
-  "strict": true,
 
-  // Prohibit use of explicitly undeclared variables.
-  "undef": true,
+    // THE GOOD PARTS
 
-  // Warn when variables are defined but never used.
-  "unused": true,
+    "asi": false,            // Whether automatic semicolon insertion should be allowed.
+    "laxbreak": false,       // Whether line breaks should not be checked, e.g. `return [\n] x`.
+    "bitwise": false,        // Whether bitwise operators (&, |, ^, etc.) should be forbidden.
+    "boss": true,            // Whether assignments inside `if`, `for` and `while` should be allowed. Usually conditions and loops are for comparison, not assignments.
+    "curly": true,           // Whether curly braces around all blocks should be required.
+    "eqeqeq": true,          // Whether `===` and `!==` should be required (instead of `==` and `!=`).
+    "eqnull": false,         // Whether `== null` comparisons should be allowed, even if `eqeqeq` is `true`.
+    "evil": false,           // Whether `eval` should be allowed.
+    "expr": true,            // Whether ExpressionStatement should be allowed as Programs.
+    "forin": false,          // Whether `for in` loops must filter with `hasOwnPrototype`.
+    "immed": true,           // Whether immediate invocations must be wrapped in parens, e.g. `( function(){}() );`.
+    "latedef": true,         // Whether use before define should be forbidden.
+    "loopfunc": false,       // Whether functions should be allowed to be defined within loops.
+    "noarg": false,          // Whether arguments.caller and arguments.callee should be forbidden.
+    "regexp": false,         // Whether `.` should be forbidden in regexp literals.
+    "regexdash": false,      // Whether unescaped first/last dash (-) inside brackets in regexps should be allowed.
+    "scripturl": false,      // Whether script-targeted URLs should be allowed.
+    "shadow": false,         // Whether variable shadowing should be allowed.
+    "supernew": false,       // Whether `new function () { ... };` and `new Object;` should be allowed.
+    "undef": true,           // Whether variables must be declared before used.
+    "validthis": false,      // Whether `this` inside a non-constructor function should be allowed.
+    "smarttabs": true,       // Whether smarttabs should be allowed (http://www.emacswiki.org/emacs/SmartTabs).
+    "proto": false,          // Whether the `__proto__` property should be allowed.
+    "onecase": false,        // Whether one-case switch statements should be allowed.
+    "nonstandard": false,    // Whether non-standard (but widely adopted) globals should be predefined.
+    "multistr": false,       // Allow multiline strings.
+    "laxcomma": false,       // Whether line breaks should not be checked around commas.
+    "lastsemic": false,      // Whether semicolons may be ommitted for the trailing statements inside of a one-line blocks.
+    "iterator": false,       // Whether the `__iterator__` property should be allowed.
+    "funcscope": false,      // Whether only function scope should be used for scope tests.
+    "esnext": false,         // Whether es.next specific syntax should be allowed.
 
-  /*
-   * RELAXING OPTIONS
-   * =================
-   */
 
-  // Suppress warnings about == null comparisons.
-  "eqnull": true
+    // STYLE PREFERENCES
+
+    "newcap": false,         // Whether constructor names must be capitalized.
+    "noempty": false,        // Whether empty blocks should be forbidden.
+    "nonew": false,          // Whether using `new` for side-effects should be forbidden.
+    "nomen": false,          // Whether names should be checked for leading or trailing underscores (object._attribute would be forbidden).
+    "onevar": true,          // Whether only one var statement per function should be allowed.
+    "plusplus": false,       // Whether increment and decrement (`++` and `--`) should be forbidden.
+    "sub": false,            // Whether all forms of subscript notation are allowed.
+    "trailing": false,       // Whether trailing whitespace rules apply.
+    "indent": 4,             // Specify indentation.
+    "white": false,          // Whether strict whitespace rules apply.
+    "quotmark": "single",    // Quote formatting
+
+
+    // COMPLEXITY
+
+    "maxparams": 5,          // Maximum number of function parameters.
+    "maxdepth": 3,           // Maximum block nesting depth.
+    "maxstatements": 25,     // Maximum number of statements per function.
+    "maxcomplexity": 6,      // Maximum cyclomatic complexity.
 }
