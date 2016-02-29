@@ -25,7 +25,7 @@
   1. [Comparison Operators & Equality](#comparison-operators--equality)
   1. [Blocks](#blocks)
   1. [Comments](#comments)
-  1. [Whitespace](#whitespace)
+  1. [Whitespace and line max length](#whitespace)
   1. [Commas](#commas)
   1. [Semicolons](#semicolons)
   1. [Type Casting & Coercion](#type-casting--coercion)
@@ -1247,7 +1247,7 @@
 **[⬆ back to top](#table-of-contents)**
 
 
-## Whitespace
+## Whitespace and line max length
 
   - [18.1](#18.1) <a name='18.1'></a> Use soft tabs set to 2 spaces.
 
@@ -1428,6 +1428,8 @@
 
     return obj;
     ```
+
+    - [18.7](#18.7) <a name='18.7'></a> Line max length is 120 characters 
 
 
 **[⬆ back to top](#table-of-contents)**
