@@ -25,7 +25,7 @@
   1. [Comparison Operators & Equality](#comparison-operators--equality)
   1. [Blocks](#blocks)
   1. [Comments](#comments)
-  1. [Whitespace and line max length](#whitespace)
+  1. [Whitespace and line max length](#whitespace-and-line-max-length)
   1. [Commas](#commas)
   1. [Semicolons](#semicolons)
   1. [Type Casting & Coercion](#type-casting--coercion)
